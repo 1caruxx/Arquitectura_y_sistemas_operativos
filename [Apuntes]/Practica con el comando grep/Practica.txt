@@ -1,0 +1,28 @@
+1)Traer todos los mail termiandos en ar.
+Respuesta: grep ar$ mails.txt --color
+
+2)Traer todos los mail que poseen la palabra edu.
+grep edu mails.txt --color
+
+3)Traer todos los que empiezan con eduardo.
+grep ^eduardo mails.txt --color
+
+4)Traer todos los mail que tiene numeros antes que el @.
+egrep [0-9]+@ /home/icaruxx/Documentos/mails.txt --color
+
+5)Traer todos los mail del servidor utn.
+grep @utn /home/icaruxx/Documentos/mails.txt --color
+
+6)Los mails pertenecientes a gmail
+grep @gmail mails.txt --color
+
+7)los que empiezan con vocal.
+grep ^[a,e,i,o,u] mails.txt --color
+
+8)Todas las que son .edu
+grep .edu /home/icaruxx/Documentos/mails.txt --color
+
+9) todas las que no son .com
+10)Que con tengan un numero o maximo 2
+egrep [0-9]{2}@ mails.txt --color
+
