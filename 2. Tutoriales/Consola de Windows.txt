@@ -1,0 +1,65 @@
+siguienet video: https://www.youtube.com/watch?v=yuxbTr8aSwE&list=PLqhE9YiLeBVALHFO8zTM0xR3cGreOD7ea&index=3
+https://www.youtube.com/watch?v=oYTBD9Pc3AE
+El interprete de comandos de Windows se llama "cmd" y se encuentra localizado en la siguiente ruta: C:\Windows\System32\cmd.exe
+
+---------
+Comandos |
+---------
+
+slmgr -rearm: Reinicia la informacion de la licencia (cancela temporalmente la deteccion de un Sistema Operativo pirata).
+.\: Ejecuta un archivo (no funciona con rutas).
+	-.\nombre_del_arhivo
+dir: Realiza un listado de todos los directorios y archivos que sean contenidos por el directorio en el cual estoy posicionado asi como tambien su fecha y hora de creacion, su tipo y el espacio que ocupan.
+cd (Change directory): Me permite desplazarme entre directorios.
+	-cd /: Para acceder al directorio raiz.
+	-cd nombre_del_directorio: Para acceder a un directorio contenido por el directorio en el cual estoy posicionado.
+	-cd ruta de un directorio: Para acceder a cualquier directorio donde sea que este posicionado.
+	-cd sin_argumento Devuelve la ruta en la cual estoy posicionado.
+cls (clean screen): Limpia la pantalla.
+md: Crea directorios.
+	-md nombre
+	-md nombre1 nombre2 nombre3 nombren (una forma para crear varios directorios a la vez).
+	-md "nombre del directorio" (Escribir entre comillas para poder incluir algunos caracteres que no se reconocerian de otra forma como pueder ser el espacio).
+title: Cambia el titulo de la consola.
+	-title nombre
+	-title "Nombre" (para incluir caracteres que no se reconozcan de otra forma).
+color: cambia el color del fondo asi como la salida de la consola.
+	-color cualquier_argumento (para desplegar el menu de ayuda).
+	-color dos digitos hexadecimales (el primero para el fondo y el segundo para la salida de la consola).
+	-color sin_argumento (restaura el color que tenia cuando se inicio el CMD).
+copy: Permite copiar un archivo.
+	-copy nombre_del_archivo nuevo_nombre_del_archivo. (Es posible incluso cambiar el formato del archivo modificando la extension).
+copy con: Permite crear un archivo.
+	-copy con nombre_del_archivo.extension
+type: Muestra en pantalla el contenido de un archivo (Puede ser cualquier tipo de archivo).
+	-type nombre_del_archivo
+rename: Renombra un archivo (Es posible modificar la extension del archivo. El contenido del archivo quedara intacto).
+	-rename nombre_del_archivo nuevo_nombre_del_archivo
+del: Borra un archivo o todos los archivos de un directorio (no borra directorios ni los archivos que esten dentro de directorios internos).
+	-del nombre_del_archivo
+	-del nombre_del_directorio (borrara todos los archivos en su interior).
+erase: Se comporta similar a el comando del pero los argumentos que se le pueden pasar varian.
+rd (remove directory): Elimina un directorio VACIO.
+	-rd nombre_del_directorioç
+help: Muestra en pantalla informacion de un comando que se le pasa como argumento.
+	-help nombre_del_comando
+	-help sin_argumento: Realiza un listado de comandos asi como sus funciones.
+date: Muestra la fecha actual y establece una nueva. Si se pulsa enter sin especificar una nueva fecha, establece la fecha actual.
+	-date
+	-date /t: Muestra la fecha actual sin pedir una nueva.
+time: Muestra la hora actual y establece una nueva. Si se pulsa enter sin especificar una nueva hora, establece la hora actual.
+	-time
+	-date /t: Muestra la hora actual sin pedir una nueva.
+exit: Sale de la consola.
+start: Ejecuta una nueva consola de comandos.
+shutdown: Apaga, reinicia, suspende e hiberna el equipo.
+
+ping: 
+
+-------
+atajos |
+-------
+
+F7: Muestra un listado de los comandos utilizados durante la sesion actual en una ventana emergente para su reutilizacion.
+Flecha direccional derecha: Escribe automaticamente el ultimo comando introducido.
+Flecha direccional arriba y abajo: Permiten desplazarme entre los comandos usados en la sesion actual para su rapida implementacion.

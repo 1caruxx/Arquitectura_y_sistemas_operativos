@@ -1,0 +1,13 @@
+-------------------------------
+Como crear una maquina virtual |
+-------------------------------
+
+1) Descargar el programa: VirtualBox. Link: https://www.virtualbox.org/wiki/Downloads
+2) Completar la instalacion guiada con el asistente de instaacion.
+3) Ejecutar VirtualBox y clickar en la opcion nueva.
+4) Seleccionar el sistema operativo que se desea usar asi como su version.
+5) Para cargar un sistema operativo en la maquina virtual, sera necesario una imagen de un disco virtual (un archivo con extension vdi).
+	-Pueden descargarse del siguiente enlace: https://www.osboxes.org/virtualbox-images/
+6) La maquina virtual puede configurarse siempre y cuando no este corriendo haciendo click derecha en ella>Configuracion...
+	-Puede modificarse el espacio de memoria asignado, asi como los nuecleos y el tipo de sistema operativo.
+	-Tambien se puede aniadir discos duros en el apartado de almacenamiento.

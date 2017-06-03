@@ -1,0 +1,45 @@
+--------------------------------
+Instalacion de GNU-Linux Debian |
+--------------------------------
+
+1) Descargar la imagen ISO del sistema operativo.
+	-Se ofrecen distintos medios para hacerlo, HTTP, jigdo y BitTorrent (en mi caso particular use BitTorrent).
+	-Para arquitecturas de sistema de 32 bits, se debera seleccionar la opcion i386, para 64 bits, la opcion amd64.
+	-Para la instalacion del sistema operativo, solo es necesario descargar el CD 1, los demas son archivos complementarios y entornos de escritorio.
+	-Link: https://www.debian.org/CD/
+2) Descargar el programa encargado de bootear una unidad extraible para que arranque al iniciar el BIOS. En mi caso particular utilize UNetbootin.
+	-Es necesario que la unidad extraible este completamente vacia, por lo que habra que formatearla previamente. (Click derecho en la unidad>Formatear>Formato rapido>Iniciar).
+	-Colocar la imagen ISO en la unidad extraible.
+	-Se ejecuta UNetbootin (o cualquier otro programa para bootear) y se selecciona el sistema operativo a instalar (Debian) asi como su version (Stable_NETInstall).
+	-Se selecciona la imagen ISO que deberia estar guardada en la unidad extraible formateada.
+	-Link: https://unetbootin.github.io/
+3) Se debera realizar una particion en el disco, que es donde se instalara el sistema operativo.
+	-Para ello, click derecho en el icono de Equipo>Administrar>Administracion de disco.
+	-Se selecciona la partion primaria del disco elegido y se le hace click derecho sobre ella>Reducir volumen. Se selecciona la cantidad de MegaBytes que se le reduciran a la particion.
+	-La nueva particion deberia verse representada con una banda negra en su parte superior y deberia estar marcada como "No asignada".
+	-Si se desea devolver el volumen a la particion primaria, click derecho en ella>Extender volumen. Se abrira el asistente para extender volumenes. En el cuadro de la parte derecha apareceran todas las particiones que no esten asignadas con las cuales podre aumentar el volumen de mi particion primaria.
+	-Selecciono una de las particiones no asignadas asi como el espacio (en MegaBytes) que deseo utilizar.
+4) Se debe reiniciar el PC. Durante la pantalla de inicio en la que aparece el modelo del mother, se debera pulsar una tecla especifica para acceder al setup de la BIOS. En mi caso particular es la tecla supr pero varia segun el PC (en muchos es alguna de las funciones).
+	-Se debera seleccionar la unidad con la cual la BIOS arrancara que en este caso sera la unidad extraible previamente booteada con la imagen ISO almacenada. (El setup de la BIOS variara en cada caso, pero la estructura es similar. La opcion de seleccion de la unidad de arranque siempre estara en la pestania "Boot").
+	-Se guardan los cambios (en mi caso es pulsando la tecla F10).
+5) Cuando se reinicie el PC, arrancara la unidad extraible elegido y en su defecto, el instalador guiado de Debian.
+
+Link tutorial: https://www.youtube.com/watch?v=bFuG8tnNPOA
+
+---------------
+Desinstalacion |
+---------------
+Al instalar cualquier distribucion de Linux, se instalara tambien GRUB que es el sistema de arranque de este sistema operativo.
+A la hora de desinstalar esta distribucion, sera necesario sobrescribir el GRUB por el MBR, que es el sistema de arranque de Windows. Si no se realiza esta accion, Windows no iniciara.
+
+1) Descargar el instalador del programa easyBCD. Link: http://neosmart.net/EasyBCD/
+2) Ejecutarlo como administrador y completar la instalacion guiada.
+3) Clickar en Despliegue de BCD>Escribir MBR.
+4) Luego sera necesario eliminar las particiones en las cuales este instalada la distribucion asi como todas aquellas que esten relacionadas (memoria de intercambio o archivos personales).
+	-Click derecho en equipo>Administrar>Administracion de discos.
+	-Click derecho en la particion que se desee eliminar>Eliminar volumen.
+	-Finalmente se tendra que volver a hacer click derecho en el espacio que haya quedado libre y click en Eliminar particion.
+
+Link tutorial: https://www.youtube.com/watch?v=ct0GJvG8Law
+
+Nota: Todos los pasos realizados tambien se aplican a cualquier otra distribucion de Linux asi como sistema operativo.
