@@ -1,0 +1,39 @@
+﻿1) Indicar verdadero o falso
+
+	A) /lib, contiene las librerias compartidas para los binarios instalados en el sistema. (verdadero).
+
+	B) Para sistemas de 64 bits existira /lib32. (Verdadero) (todos los procesos los guarda en la carpeta lib).
+
+	C) El directorio /root se ubican todos los directorios del sistema. (Falso)(/ es el directorio raiz o local host, root esta un nivel mas abajo que este directorio).
+	D) En el /var se definen las variables de mis programas. (Falso)(Los registros del sistema).
+	e) /bin contiene los subdirectorios bindeados (enlazados).(Falso)(Contiiene aplicaciones de comandos escenciales y aplicaciones binarias)
+
+	F) /bin contiene los archivos de multimedia. (Falso) (lo mismo que la anterior)
+	G) /media contiene los archivos multimedia. (Falso) Contiene los puntos de montaje de los medios extraibles.
+
+	H) /etc contiene todos los datos extras innecesarios. (Falso)(Contiene archvos de configuracion de sistema)
+
+	I) /dev contiene todas las variables del desarollo de mi aplicacion. (Falso) (Contiene archivos especiales de bloques y caracteres asociados a dispositivos de hardware)
+
+
+Aclaracion: de encontrar una falsa justificar con la respuesta correcta.
+
+
+
+2)Diferencias de memoria:
+
+	A)¿Que idiferencia existe entre memoria principal y secundaria? 
+	  Las memorias secundarias son permamentes y mas lentas. Las memorias principales son mas velocesi, volatiles y almacenan procesos.
+
+	B)¿Como se llama la memoria cache que esta dentro del chip del CPU?
+	  Memoria cache L1
+
+	C)¿Como se llama la memoria que esta en el modulo del CPU?
+	  Memoria cache L2
+
+	D)¿Cual es mas grande?
+	  La memoria cache L2 ya que genera una copia de la L1
+
+	E)¿Por que necesitamos memoria virtual?
+	  Para realizar procesos y que los datos se carguen de forma ordenada en memoria principal. Para aumentar la performance de la memoria RAM, 
+carga en memoria RAM solo los datos proximos a ejecutarse para no tener que cargar un programa enterro.
