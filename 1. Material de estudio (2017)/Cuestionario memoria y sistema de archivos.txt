@@ -6,7 +6,7 @@
 
 	C) El directorio /root se ubican todos los directorios del sistema. (Falso)(/ es el directorio raiz o local host, root esta un nivel mas abajo que este directorio).
 	D) En el /var se definen las variables de mis programas. (Falso)(Los registros del sistema).
-	e) /bin contiene los subdirectorios bindeados (enlazados).(Falso)(Contiiene aplicaciones de comandos escenciales y aplicaciones binarias)
+	e) /bin contiene los subdirectorios bindeados (enlazados).(Falso)(Contiene aplicaciones de comandos escenciales y aplicaciones binarias)
 
 	F) /bin contiene los archivos de multimedia. (Falso) (lo mismo que la anterior)
 	G) /media contiene los archivos multimedia. (Falso) Contiene los puntos de montaje de los medios extraibles.
@@ -23,7 +23,7 @@ Aclaracion: de encontrar una falsa justificar con la respuesta correcta.
 2)Diferencias de memoria:
 
 	A)¿Que idiferencia existe entre memoria principal y secundaria? 
-	  Las memorias secundarias son permamentes y mas lentas. Las memorias principales son mas velocesi, volatiles y almacenan procesos.
+	  Las memorias secundarias son permamentes y mas lentas. Las memorias principales son mas veloces, volatiles y almacenan procesos.
 
 	B)¿Como se llama la memoria cache que esta dentro del chip del CPU?
 	  Memoria cache L1
