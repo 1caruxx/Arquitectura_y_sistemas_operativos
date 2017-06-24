@@ -3,11 +3,40 @@ Como crear una maquina virtual |
 -------------------------------
 
 1) Descargar el programa: VirtualBox. Link: https://www.virtualbox.org/wiki/Downloads
-2) Completar la instalacion guiada con el asistente de instaacion.
+2) Completar la instalacion guiada con el asistente de instalacion.
 3) Ejecutar VirtualBox y clickar en la opcion nueva.
 4) Seleccionar el sistema operativo que se desea usar asi como su version.
 5) Para cargar un sistema operativo en la maquina virtual, sera necesario una imagen de un disco virtual (un archivo con extension vdi).
 	-Pueden descargarse del siguiente enlace: https://www.osboxes.org/virtualbox-images/
 6) La maquina virtual puede configurarse siempre y cuando no este corriendo haciendo click derecha en ella>Configuracion...
-	-Puede modificarse el espacio de memoria asignado, asi como los nuecleos y el tipo de sistema operativo.
+	-Puede modificarse el espacio de memoria asignado, asi como los nucleos y el tipo de sistema operativo.
 	-Tambien se puede aniadir discos duros en el apartado de almacenamiento.
+7) Si se desea correr la maquina virtual en pantalla completa
+
+--------------------------------------------------------
+Como arrancar una maquina virtual desde una memoria USB |
+--------------------------------------------------------
+
+1) Lo primero sera identificar el numero identificador que le asigno el sistema anfitrion a nuestra memoria USB. Para ello:
+	-Click derecho en equipo>Administrar>Administracion de discos y verificamos el numero de nuestra unidad. O bien:
+	-En la barra de busqueda del menu de incio se copiara la siguiente linea: diskmgmt.msc y se verificara el numero de la unidad al igual que la forma anterior.
+2) A traves de un interpretador de comandos, como usuario root, se debera acceder al siguiente subdirectorio cd %programfiles%\oracle\virtualbox
+3) En el se lanzara el siguiente comando: VBoxManage internalcommands createrawvmdk -filename "%USERPROFILE%"\.VirtualBox\usb.vmdk -rawdisk \\.\PhysicalDrive#
+	-La funcion de este comando es la de crear una imagen de un disco duro virtual (un archivo con extension .vdi) de nuestra memoria USB booteable.
+	-Para ello se debera reemplazar el simbolo '#' (numeral) al final de la linea por el numero identificador de la memoria USB.
+4) Se debera crear una nueva maquina virtual en VirtualBox (ejecutandolo como administrador o root) que utilize este archivo de disco duro.
+
+Link tutorial: https://www.youtube.com/watch?v=wf_qtDdRIok
+
+--------------------------------------------
+Correr maquina virtual en pantalla completa |
+--------------------------------------------
+
+1) En el caso de estar corriendo una version de Windows, el la barra superior se debera clickar la opcion Dispositivos>Insertar imagen de CD de las <Guests additions>... y seguir la instalacion guiada.
+	-Por el contrario, si se esta ejecutando una distribucion de Linux, en el iterpretador de comandos como usuario root se debera utilizar el siguiente comando: apt-get install virtualbox-guest-dkms
+	 para instalar los controladores necesarios.
+2) Se debera configurar la resolucion de la maquina virtual no importa cual sea el sistema operativo que se este corriendo.
+3) El atajo de teclado HOST (por defecto ctrl derecho) + f permite entrar o salir del modo pantalla completa.
+
+Link tutorial: https://www.youtube.com/watch?v=z4qxWjXQn_k
+	       https://www.youtube.com/watch?v=uwA3R3oqcU8
