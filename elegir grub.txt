@@ -1,0 +1,7 @@
+http://kernel308.blogspot.com.ar/2014/10/como-cambiar-de-grub-en-un-equipo-con.html
+
+
+sudo grub-install /dev/sda
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+
+gedit /boot/grub/grub.cfg
