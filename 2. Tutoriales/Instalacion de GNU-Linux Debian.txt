@@ -30,7 +30,7 @@ Link tutorial: https://www.youtube.com/watch?v=bFuG8tnNPOA
 Desinstalacion |
 ---------------
 Al instalar cualquier distribucion de Linux, se instalara tambien GRUB que es el sistema de arranque de este sistema operativo.
-A la hora de desinstalar esta distribucion, sera necesario sobrescribir el GRUB por el MBR, que es el sistema de arranque de Windows. Si no se realiza esta accion, Windows no iniciara.
+A la hora de desinstalar esta distribucion, sera necesario sobrescribir el GRUB por Windows Boot Manager en el MBR, que es el sistema de arranque de Windows. Si no se realiza esta accion, Windows no iniciara.
 
 1) Descargar el instalador del programa easyBCD. Link: http://neosmart.net/EasyBCD/
 2) Ejecutarlo como administrador y completar la instalacion guiada.
@@ -43,3 +43,28 @@ A la hora de desinstalar esta distribucion, sera necesario sobrescribir el GRUB 
 Link tutorial: https://www.youtube.com/watch?v=ct0GJvG8Law
 
 Nota: Todos los pasos realizados tambien se aplican a cualquier otra distribucion de Linux asi como sistema operativo.
+
+-----
+GRUB |
+-----
+
+GRUB es el bootloader por defecto de todas las distribuciones de Linux.Se encuentra almacenado en una porcion del disco duro llamada MBR (Master Boot Record) y pesa 446 bytes.
+Es un programa encargado de traer a memoria principal el nucleo de un sistema operativo. Este permite seleccionar con que sistema operativo se desea inciar.
+Cada distro de Linux tiene su GRUB personalizada y por defecto se escribira en el MBR el GRUB de la ultima distro instalada a menos que el instalador del sistema operativo brinde la opcion de no escribir un GRUB.
+Es posible sobreescribir el GRUB por alguno de las distribuciones que tengamos instaladas a nuestra eleccion.
+Para ello abra que iniciar en la distribucion de la cual queremos instalar su GRUB y escribir los siguientes comandos en la terminal:
+	-sudo grub-install /dev/sda
+	 sudo grub-mkconfig -o /boot/grub/grub.cfg
+
+Link tutorial: http://kernel308.blogspot.com.ar/2014/10/como-cambiar-de-grub-en-un-equipo-con.html
+
+Tambien es posible modificar algunas de su caracteristicas, para ello sera necesaria la modificacion del archivo GRUB en /etc/default
+	-Con el comando gedit o nano /etc/default/grub se podra realizar esta accion.
+
+	GRUB_DEFAULT=# corresponde al sistema operativo u opcion que estara seleccionado por defecto. Para saber el numero correspondiente a la opcion que se desea que este marcada
+	se debera contar las opciones que aparecen en el GRUB de arriba hacia abajo empezando por el 0, luego se debera modificar ese numero en donde aparece el simbolo '#' (que por defecto es un 0).
+
+	GRUB_TIMEOUT=# corresponde al tiempo de espera antes de iniciar el sistema operativo o la opcion marcada por defecto. Por defecto son 10 segundos, pero se puede reemplazar por cualquier unidad.
+
+	
+	-Luego se debera guardar los cambios realizados actualizando el GRUB empleando el siguiente comando: update-grub en el terminal.

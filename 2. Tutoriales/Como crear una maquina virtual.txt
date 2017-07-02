@@ -11,7 +11,6 @@ Como crear una maquina virtual |
 6) La maquina virtual puede configurarse siempre y cuando no este corriendo haciendo click derecha en ella>Configuracion...
 	-Puede modificarse el espacio de memoria asignado, asi como los nucleos y el tipo de sistema operativo.
 	-Tambien se puede aniadir discos duros en el apartado de almacenamiento.
-7) Si se desea correr la maquina virtual en pantalla completa
 
 --------------------------------------------------------
 Como arrancar una maquina virtual desde una memoria USB |
