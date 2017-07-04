@@ -1,3 +1,12 @@
+-------
+Indice |
+-------
+
+1) Instalacion de GNU-Linux Debian
+2) Desinstalacion
+3) GRUB 
+4) Problemas con el panel frontal de sonido en distribuciones de Linux
+
 --------------------------------
 Instalacion de GNU-Linux Debian |
 --------------------------------
@@ -13,6 +22,16 @@ Instalacion de GNU-Linux Debian |
 	-Se ejecuta UNetbootin (o cualquier otro programa para bootear) y se selecciona el sistema operativo a instalar (Debian) asi como su version (Stable_NETInstall).
 	-Se selecciona la imagen ISO que deberia estar guardada en la unidad extraible formateada.
 	-Link: https://unetbootin.github.io/
+2.5) Linux tambien brinda la posibilidad de bootear cualquier medio con cualquier imagen de una distribucion de este sistema operativo utilizando el comando dd
+	-En caso de tener la imagen viva de cualquier distribucion o un sistema operativo Linux instalado se debera abrir la consola de comandos terminal.
+	-Se debera introducir el siguiente comando: dd if=# of=/dev/sdb bs=4M
+	-En if (input file), '#' Sera la ruta en donde se encuentra almacenada la imagen ISO del sistema operativo.
+	-En of(output file), ira la ruta del medio de almacenamiento que en la mayoria de los casos sera /dev/sdb aunque si hay mas medios intalados en el momento puede variar por sdc, sdd etc...
+	-En bs(bytes por segundo) se debera asignar 4M arbitrariamente.
+	-Luego habra que esperar unos momentos a que se transiferan los archivos (no se especifica ningun indicador de progreso en la terminal, asi que no se debera tocar nada hasta que termine el proceso con un mensaje de aviso por consola).
+
+Link tutorial: https://www.youtube.com/watch?v=qvkPiQ0KxHY
+
 3) Se debera realizar una particion en el disco, que es donde se instalara el sistema operativo.
 	-Para ello, click derecho en el icono de Equipo>Administrar>Administracion de disco.
 	-Se selecciona la partion primaria del disco elegido y se le hace click derecho sobre ella>Reducir volumen. Se selecciona la cantidad de MegaBytes que se le reduciran a la particion.
@@ -68,3 +87,17 @@ Tambien es posible modificar algunas de su caracteristicas, para ello sera neces
 
 	
 	-Luego se debera guardar los cambios realizados actualizando el GRUB empleando el siguiente comando: update-grub en el terminal.
+
+--------------------------------------------------------------------
+Problemas con el panel frontal de sonido en distribuciones de Linux |
+--------------------------------------------------------------------
+
+En muchas de las distribuciones de Linux que se instalen, se presentara el hecho de que el sistema operativo no reconoce el panel frontal de sonido por lo que los medios que insertemos no reproduciran audio.
+Esto se debe a que muchas distribuciones carecen de los driver del panel de la salida frontal.
+Para solucionar este problema habra que cambiar el modo del panel frontal al estandar AC97 que no requiere drives instalados en ningun sistema operativo (por defecto esta marcado HD Audio que si los precisa).
+Para ello abra que acceder al BIOS del sistema y configurar desde alli. Si bien el setup del BIOS de cada sistema varia, la ruta deberia ser muy similar.
+
+En mi caso la ruta es la siguiente: Advanced>Chipset>South Bridge Configuration>Front panel Support Type y ahi selecciono AC97.
+
+
+Link tutorial: https://cosasqueinternet.wordpress.com/2010/10/30/hacer-funcionar-el-panel-frontal-de-audio-en-ubuntu-linux/

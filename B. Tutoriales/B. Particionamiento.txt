@@ -1,0 +1,49 @@
+Una particion consiste en la division logica de un medio de almacenamiento.
+Cada particion sera un conjunto de bloques fisicos contiguos que son interpretados como una unidad independiente por el sistema operativo.
+Existen distintos tipos de particiones:
+	-Primarias: Este tipo de particiones permite incializar un sistema operativo, se pueden formatear (es decir, asignar un tipo de sistema de archivhos) y almacenar datos normalmente.
+		    Existe una limitacion con este tipo de particiones y es que solo puede haber un maximo de 4 particiones primarias por unidad.
+		    Esto se debe a que el MBR de cada unidad tiene asignado un espacio de 64 bytes para la tabla de particiones, 16 por cada particion y este espacio no puede ser ampliado.
+	-Extendidas: Este tipo de particion ocupa un espacio en la tabla de particiones del MBR y solo puede haber una por cada unidad (por lo que puede haber un maximo de 3 particiones primarias y una extendida por unidad).
+		     Las particiones extendidas son la solucion al limite de 4 particiones primarias ya que dentro de esta particiones, puede crear infinitas particiones logicas.
+		     Este tipo de particiones no puede ser formateada y en consecuencia, no puede almacenar informacion (directamente).
+	-Logicas:
+
+Windows presenta varias limitaciones a la hora de particionar:
+	-Solo permite crear particiones primarias.
+	-No se pueden particionas unidades extraibles.
+	-Si se particiona una unidad extraible desde otro sistema operativo, solo reconocera la particion que corresponda al primer sector.
+	-Si reduce el volumen de una particion que Windows reconozca existiendo particiones cuyo formato no, no se podra devolver ese espacio no asignado hasta que se borren todas y cada una de las particiones que no pertenzcan a un formato que reconozca Windows (por ejemplo aquellas en las que se instala otro sistema operativo).
+
+Para crear particiones en Windows habra que hacer click derecho en Equipo>Administrar>Administracion de discos.
+Se desplegara una lista de todos los medios instalados en el computador asi como los medios extraibles.
+Una particion solo se podra crear sobre espacio en disco no asignado o libre (es decir que no pertenezca a ninguna particion), por lo que si no hay espacio no asignado, se debera reducir el volumen de alguna particion haciendo click derecho en ella>Reducir volumen...
+Luego se debera hacer click derecho en ese espacio no agignado>Nuevo volumen simple... para abrir el asistente de volumenes.
+
+Linux presenta una mayor libertad a la hora de particionar.
+Las unidades de almacenamiento son nombradas "sd" (sata disk) y a cada una se le asigna una letra de forma secuencial alfabeticamente.
+Si solo hay uno disco duro instalado en el computador este se llamara "sda" y si se instala otro medio, se llamara "sdb" y asi sucesivamente.
+El directorio /dev (device (dispositivo)) contendra archivos especiales de los medios de almacenamiento.
+El comando encargado de la administracion de las unidades instaladas es fdisk
+Como usuario root se debera usar el comando fdisk seguido de la ruta de nuestro medio que queremos particionar.
+Para realizar un listado de las unidades se puede utilizar el comando fdisk -l o lsblk
+Ejemplo: sudo fdisk /dev/sd# (en donde '#' es la letra asignada a la unidad).
+Una vez abierto el asistente de particionado, se podra:
+	-Mostrar ayuda con la tecla m
+	-Imprimir informacion de la unidad pulsando la tecla p
+	-Crear una nueva particion con la tecla n
+	-Asignar un tipo a la particion con la tecla t
+	-Eliminar una particion con la tecla d
+	-Salir del asistente con la tecla q
+	-Salir del asistente guardando los cambios con la tecla w
+Entre otras.
+
+Las particiones creadas de un medio se nombraran de la misma forma pero se les asignara un numero.
+Ejemplo: Si se crea una particion de la unidad "sdb", esta se llamara "sdb1", la segunda "sdb2" y asi sucesivamente.
+Las particiones tambien estaran contenidas en el directorio /dev
+Para darle formato a una particion se debera emplear el comando mkfs (make file system) que le seguira un "." y el tipo de formato.
+Ejemplo: Si se desea formatear la particion "sdb1" al tipo "ext4" se debera escribir mkfs.ext4 /dev/sdb1
+         En el caso de que sea fat32 mkfs.fat -F32 /dev/sdb1
+
+
+

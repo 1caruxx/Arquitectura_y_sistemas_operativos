@@ -16,7 +16,7 @@ Como crear una maquina virtual |
 Como arrancar una maquina virtual desde una memoria USB |
 --------------------------------------------------------
 
-1) Lo primero sera identificar el numero identificador que le asigno el sistema anfitrion a nuestra memoria USB. Para ello:
+1) Lo primero sera saber el numero identificador que le asigno el sistema anfitrion a nuestra memoria USB. Para ello:
 	-Click derecho en equipo>Administrar>Administracion de discos y verificamos el numero de nuestra unidad. O bien:
 	-En la barra de busqueda del menu de incio se copiara la siguiente linea: diskmgmt.msc y se verificara el numero de la unidad al igual que la forma anterior.
 2) A traves de un interpretador de comandos, como usuario root, se debera acceder al siguiente subdirectorio cd %programfiles%\oracle\virtualbox

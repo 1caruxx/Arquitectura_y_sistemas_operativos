@@ -1,0 +1,17 @@
+Qué es la Dirección IP – Cómo Saber mi IP: https://www.maestrodelacomputacion.net/que-es-la-ip-como-saber-mi-ip/
+
+la ip del router es la ip publica, las ipv4 son todos los dispositivos conectados a la subred generada por el router y son privadas.
+para saber la ip del router asi como de mi pc debere abir cmd y usar el omando ipconfig
+la ip del router sera la que aparece como puertad e enlace predeterminada
+el pc sera ipv4 (no es el mismo ethernet que wireless)
+
+
+
+si en un navegador escribo la ip de mi router y confirmo usuario asi como contraseña (especificadas debajo del router) podre acceder al un menu de configuracion de mi router
+
+
+
+
+Escritorio remoto: https://www.youtube.com/watch?v=vYEcrGhlvu4
+
+Compartir carpetas: https://www.youtube.com/watch?v=CUnFYzQQqIg
