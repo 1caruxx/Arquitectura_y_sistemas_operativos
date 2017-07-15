@@ -39,3 +39,20 @@ Correr maquina virtual en pantalla completa |
 
 Link tutorial: https://www.youtube.com/watch?v=z4qxWjXQn_k
 	       https://www.youtube.com/watch?v=uwA3R3oqcU8
+
+------------------
+Atajos de teclado |
+------------------
+
+Por defecto la tecla HOST es el ctrl derecho.
+
+Apagar la maquina: HOST + Q
+Reiniciar la maquina: HOST + R
+Modo pantalla completa: HOST + F
+
+--------
+Errores |
+--------
+
+BLKCACHE_IOERR: Solucion: habilitar el caché I/O del host (Almacenamiento » Controlador SATA » Usar la cache anfitrión de E/S).
+Link tutorial: https://davidmartinez.net/archivos/linux/solucionar-el-error-blkcache-ioerr-en-virtualbox.php
