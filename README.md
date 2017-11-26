@@ -5,6 +5,7 @@ Este repositorio contiene el material de estudio usado durante la cursada.
 ## Temas vistos
 
 * Lenguajes de programacion: definicion, niveles de abstraccion, paradigmas y tipos
+* Instalacion de distribuciones de Linux
 * Comandos de Linux
 * Composicion de un sistema operativo
 * Software libre
