@@ -6,11 +6,10 @@ Este repositorio contiene el material de estudio usado durante la cursada.
 
 * Lenguajes de programacion: definicion, niveles de abstraccion, paradigmas y tipos
 * Instalacion de distribuciones de Linux
-* Comandos de Linux
+* Comandos basicos de Linux
 * Composicion de un sistema operativo
 * Software libre
 * Uso de maquinas virtuales
-* Comandos basicos de Linux
 * LVM
 * RAID
 * Tipos de memorias, caracteristicas y funciones
